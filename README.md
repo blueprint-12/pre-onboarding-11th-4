@@ -8,5 +8,5 @@
 
 ```bash
 git clone https://github.com/blueprint-12/pre-onboarding-11th-4.git . #현재 경로에 클론
-yarn && yarn dev # 종속성 설치 후 Dev 모드 실행
+yarn && yarn dev # 종속성 설치 후 Dev 모드 실행(port number: 3000)
 ```
