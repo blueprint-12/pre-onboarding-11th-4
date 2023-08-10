@@ -3,4 +3,7 @@ export interface SickProps {
   sickNm: string; //질병 이름
 }
 
-export type SickApiResponse = SickProps[];
+export interface SickApiResponse {
+  data: SickProps[];
+  expired: number;
+}
