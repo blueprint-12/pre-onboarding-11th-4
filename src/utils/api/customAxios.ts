@@ -9,7 +9,7 @@ interface CustomAxiosError extends AxiosError {
   response?: AxiosResponse<CustomError>;
 }
 
-const BASE_URL = 'localhost:4000';
+const BASE_URL = 'http://localhost:4000';
 
 export const api: AxiosInstance = axios.create({
   baseURL: BASE_URL,
