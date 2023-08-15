@@ -34,4 +34,5 @@ yarn server #port 4000
 
 ## Issue
 
-env.d.ts 에 관하여 공부( + declare 키워드)
+- env.d.ts 에 관하여 공부( + declare 키워드)
+- TS + React + vite 환경에서 svg를 컴포넌트로 활용하는 법 => [정리 포스팅](https://blueprint-12.tistory.com/411)
