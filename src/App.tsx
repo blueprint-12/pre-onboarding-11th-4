@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import SearchLayout from './layouts/SearchLayout';
 import SearchBar from './components/SearchBar';

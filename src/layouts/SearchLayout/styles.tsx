@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
   height: fit-content;
-  justify-content: center;
   background-color: #cceaff;
   padding: 0 2rem;
+  max-width: max-content;
 `;
 export const Title = styled.div`
   font-size: 2.125rem;
@@ -21,7 +21,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1040px;
-  height: 463px;
-  /* justify-content: center; */
+  max-height: 570px;
   align-items: center;
 `;
