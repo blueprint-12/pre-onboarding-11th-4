@@ -2,7 +2,7 @@
 
 원티드 FE 인턴십 4주차 임상실험 검색 페이지
 
-### Getting Started
+## Getting Started
 
 **종속성 설치 및 dev모드 실행**
 
