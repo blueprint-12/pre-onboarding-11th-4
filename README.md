@@ -4,16 +4,26 @@
 
 ### Getting Started
 
-- 설치 및 Dev 모드 실행
+`종속성 설치 및 dev모드 실행`
 
 ```bash
 git clone https://github.com/blueprint-12/pre-onboarding-11th-4.git . #현재 경로에 클론
-yarn && yarn dev # 종속성 설치 후 Dev 모드 실행(port number: 3000)
+yarn && yarn dev #종속성 설치, port 3000
+```
+
+`서버 실행(mock api)`
+
+> 프론트와 서버는 각각 다른 터미널에서 실행시켜줘야 합니다.
+
+```bash
+yarn server #port 4000
 ```
 
 ## 구현 기능
 
-- [x] 질환명 검색시 api호출을 통해 검색어 추천 기능 구현
+> 구현 목표: [한국임상실험 검색페이지](https://clinicaltrialskorea.com/)
+
+- [x] 질환명 검색시 api호출을 통해 검색어 추천 검색어, 최근 검색어 구현
 - [x] API 호출별로 로컬 캐싱 구현 (캐싱 기능을 제공하는 라이브러리 사용없이 직접 구현)
   - [x] 검색어 없을 시, "검색어 없음" 표출
   - [x] 서버로부터 받아온 데이터마다 expire time 구현
