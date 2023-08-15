@@ -32,8 +32,7 @@ class CacheStorage<K, V> {
   }
 
   getRecentKeywords(maxCount = 3) {
-    const allKeys = Array.from(this.#storage.keys());
-    return allKeys.slice(0, maxCount).reverse(); //최신 검색어가 위로가게
+    return Array.from(this.#storage.keys()).reverse().slice(0, maxCount);
   }
 }
 
