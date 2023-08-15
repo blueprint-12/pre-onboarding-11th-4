@@ -4,16 +4,16 @@
 
 ### Getting Started
 
-`종속성 설치 및 dev모드 실행`
+**종속성 설치 및 dev모드 실행**
 
 ```bash
 git clone https://github.com/blueprint-12/pre-onboarding-11th-4.git . #현재 경로에 클론
 yarn && yarn dev #종속성 설치, port 3000
 ```
 
-`서버 실행(mock api)`
+**서버 실행(mock api)**
 
-> 프론트와 서버는 각각 다른 터미널에서 실행시켜줘야 합니다.
+> ⚠프론트와 서버는 각각 다른 터미널에서 실행시켜줘야 합니다.
 
 ```bash
 yarn server #port 4000
