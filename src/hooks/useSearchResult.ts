@@ -33,15 +33,18 @@ const useSearchResult = (endPoint: string, expired: number) => {
 
   useEffect(() => {
     if (query === '') {
-      setData((data) => ({ ...data, data: [] }));
+      setData((prevData) => ({ ...prevData, data: [] }));
       console.log('첫번째: 쿼리가 없을 때');
-    } else if (!cacheStorage.find(query)) {
+      return;
+    }
+
+    if (!cacheStorage.find(query)) {
       void getSearchList();
       console.log('두번째: 캐시스토리지에서 쿼리값을 찾지 못했을 때');
+      return;
     }
-    //만약 캐시데이터가 만료되었다면 캐시데이터를 없애고 다시 데이터가져오기
-    else if ((cacheStorage.get(query)?.expired as unknown as number) < Date.now()) {
-      console.log('cacheStorage.get(query)?.expired', cacheStorage.get(query)?.expired);
+
+    if ((cacheStorage.get(query)?.expired as unknown as number) < Date.now()) {
       console.log('세번째: 캐시스토리지값이 만료된 값일 때');
       removeCacheData();
     } else {
