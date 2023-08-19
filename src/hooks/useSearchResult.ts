@@ -4,7 +4,10 @@ import fetchSearchData from '../utils/api/fetchSearchData';
 import { cacheStorage } from '../utils/cacheStorage';
 
 const useSearchResult = (endPoint: string, expired: number) => {
-  const [data, setData] = useState<SickApiResponse>({ data: [], expired: Date.now() });
+  const [data, setData] = useState<SickApiResponse>({
+    data: [],
+    expired: Date.now(),
+  });
   const [query, setQuery] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -12,7 +15,10 @@ const useSearchResult = (endPoint: string, expired: number) => {
     setIsLoading(true);
     try {
       const res = await fetchSearchData(endPoint, query);
-      const newData = { data: res.data as SickProps[], expired: Date.now() + expired };
+      const newData = {
+        data: res.data as SickProps[],
+        expired: Date.now() + expired,
+      };
       setData(newData);
       cacheStorage.add(query, newData);
     } catch (error) {
