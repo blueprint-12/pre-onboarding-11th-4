@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "postinstall": "husky install",
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --cache src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --cache --write .",
     "preview": "vite preview",
     "server": "json-server --watch mock/db.json --port 4000"
   },
@@ -21,16 +23,18 @@
   "devDependencies": {
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "@vitejs/plugin-react": "^4.0.1",
     "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
-    "prettier": "^3.0.0",
-    "typescript": "^5.0.2",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6",
     "vite": "^4.4.0"
   }
 }
